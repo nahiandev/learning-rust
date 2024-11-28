@@ -1,9 +1,12 @@
 fn main() {
-    println!("{}", is_palindrome("Hello, world!"));
+    for i in (1..=500).step_by(71)
+    {
+        print!("{}\n", i);
+    }
 }
 
 
-fn is_palindrome(s: &str) -> bool {
-    let s = s.to_lowercase().replace(" ", "");
-    s == s.chars().rev().collect::<String>()
-}
+// fn is_palindrome(s: &str) -> bool {
+//     let s = s.to_lowercase().replace(" ", "");
+//     s == s.chars().rev().collect::<String>()
+// }
