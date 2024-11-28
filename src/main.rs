@@ -1,7 +1,9 @@
 fn main() {
-    for i in (1..=500).step_by(71)
+    for i in (-2..=50000).step_by(71)
     {
-        print!("{}\n", i);
+        if i % 69 == 0 {
+            print!("{}\n", i);
+        }    
     }
 }
 
