@@ -1,30 +1,7 @@
-// fn main() {
-//     for i in (-2..=50000).step_by(71)
-//     {
-//         if i % 69 == 0 {
-//             print!("{}\n", i);
-//         }    
-//     }
-// }
+fn main() {
+    let s1 = String::from("hello"); // s1 is the owner of this String
+    let s2 = s1; // s2 takes ownership of the String, s1 is no longer valid
 
-
-
-#[macro_use] extern crate rocket;
-
-#[get("/")]
-fn index() -> &'static str {
-    "Hello Rust!"
+    println!("{}", s2); // This works
+    // println!("{}", s1); // This would cause an error because s1 is no longer valid
 }
-
-
-
-#[launch]
-fn rocket() -> _ {
-    rocket::build().mount("/", routes![index])
-}
-
-
-// fn is_palindrome(s: &str) -> bool {
-//     let s = s.to_lowercase().replace(" ", "");
-//     s == s.chars().rev().collect::<String>()
-// }
